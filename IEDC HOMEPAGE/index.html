@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="IEDC WEBPAGE ALPHA BUILD">
+    <meta name="description" content="IEDC WEBSITE">
     <meta name="author" content="Various People">
 
     <title>IEDC HOMEPAGE</title>
@@ -12,12 +12,79 @@
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/Custom-functions.css">
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
-    
+	<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+	
+    	
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+function changeText()
+{
+ document.getElementById('hideText').innerHTML = 'Fred Flinstone';
+}
+
+function showDivs(n) {
+
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+function hide_show() {
+  var x = document.getElementById("slideshow");
+  var y = document.getElementById("slideshow1");
+  var z = document.getElementById("slideshow2");
+  currentDiv(3);
+  if (y.style.display == "none") {
+    x.style.display = "block";
+	y.style.display = "block";
+	z.style.display = "block";
+  } else {
+    x.style.display = "none";
+	y.style.display = "none";
+	z.style.display = "none";
+  }
+}
+function codeAddress() {
+var y = document.getElementById("slideshow1");
+  var z = document.getElementById("slideshow2");
+var x = document.getElementById("hideText");  
+
+x.style.display = "block";
+           y.style.display = "none";
+	z.style.display = "none";
+        }
+        
+	</script>
   </head>
-  <body>
+  <body onload="codeAddress();">
+  
 
     <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
@@ -68,13 +135,15 @@
             <div class="row">
 			<hr/>
                 <h1>About us</h1>
-
+				
 				<p1>IEDC CEA is a non-profitable organization working inside College of Engineering Adoor, with an aim of developing Entrepreneur habit and lifestyle with in the Engineering students to promote them to become a job provider rather than a job seeker</p1>
 				
                 
         </div>
     </section>
 	
+	<hr></hr>
+
 	<!-- EVENTS -->
     <section class="events" id="Events">
         <div class="container">
@@ -86,37 +155,81 @@
                   <div class="col-lg-11 text-center mx-auto col-12">
 
                       <div class="col-lg-8 mx-auto">
-                        <h4>Past Events</h4>
+                        <h2>Past Events</h2>
+						<h3>PATHFINDER</h3>
 						<hr></hr>
+						
                       </div>
-					  
-					  
-                      <img src="images\Events\Pathfinder.jpeg" alt="IEDC logo" width="200" height="300"><h3>PATHFINDER</h3>
 					  </div>
+					  <div class="w3-card-4">
+					  <div class="w3-display-container">
+					  <img src="images\Events\Pathfinder.jpeg" class="img"  alt="IEDC logo" width="200" height="300" align="left">
 					  
-							The only limits to our realization of tomorrow will be our doubts of today
-
-							We see a lot of young minds confused and concerned about their future. "What after college?" Has this thought crossed your mind anytime? If it has  and you are yet to find a solution, then dear CEAns, we've got this covered. The Innovation and Entrepreneurship Development Centre(IEDC)-CEA unit is organising Pathfinder- an extensive talk on various career options after B.Tech . This will be conducted at the College auditorium on 19th September 2019 Thursday from 10:30 am to 12:30 pm. 
-					  
-						<p>About the speaker:<p>
+					  </div>
+					  <div style="overflow-y: scroll; height:300px;">
+					  <p>The only limits to our realization of tomorrow will be our doubts of today
+					  </p>
+						<p>	We see a lot of young minds confused and concerned about their future. "What after college?" Has this thought crossed your mind anytime? If it has  and you are yet to find a solution, then dear CEAns, we've got this covered. The Innovation and Entrepreneurship Development Centre(IEDC)-CEA unit is organising Pathfinder- an extensive talk on various career options after B.Tech . This will be conducted at the College auditorium on 19th September 2019 Thursday from 10:30 am to 12:30 pm. 
+					  </p>
+						<p>About the speaker:
+						</p>
 						<p>Allen Thomas Kannattu is an established career guide, Influencer and marketer who heads Career Launcher, Thiruvalla. He is also the Director of Kannattu Arun Group, a well established business firm in the state. 
-						<p>
-						<p>We whole-heartedly welcome all dear CEAns to this event.<p>
+						</p>
+						<p>We whole-heartedly welcome all dear CEAns to this event.
+						</p>
 						</div>
-
-
-
-                     
-                      <div class="col-lg-8 mx-auto">
-                        <h4>Upcomming Events</h4>
+						<div class="w3-display-bottom w3-container"><button onclick="hide_show()"class="w3-btn w3-hover-blue"><b id="hideText">Show Gallery</b> </button></div>
+					  </div>
+					  </div>
+					  <div id="slideshow">
+					 <div class="w3-content w3-display-container" style="max-width:800px">
+						<img class="mySlides" src="images\Events\Pathfinder_gallery\1.jpeg" width="800" height="400">
+						<img class="mySlides" src="images\Events\Pathfinder_gallery\2.jpeg" width="800" height="400">
+						<img class="mySlides" src="images\Events\Pathfinder_gallery\3.jpeg" width="800" height="400">
+						<img class="mySlides" src="images\Events\Pathfinder_gallery\4.jpeg" width="800" height="400">
+						 <img class="mySlides" src="images\Events\Pathfinder_gallery\5.jpeg" width="800" height="400">
+						<img class="mySlides" src="images\Events\Pathfinder_gallery\6.jpeg" width="800" height="400">
+						<div class="w3-center w3-display-middle" id="slideshow1" style="width:100%">
+						 <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+						<div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+						</div>
+						<div class="w3-center w3-display-bottommiddle" id="slideshow2"  style="width:100%">
+						<span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+						<span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+						<span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+						<span class="w3-badge demo w3-border" onclick="currentDiv(4)"></span>
+						<span class="w3-badge demo w3-border" onclick="currentDiv(5)"></span>
+						<span class="w3-badge demo w3-border" onclick="currentDiv(6)"></span>
+						</div>
+					</div>
+					</div>
+						<hr></hr>
+                      <div class="col-lg-11 text-center mx-auto col-12">
+                        <h2>Upcomming Events</h2>
                       </div>
 					  
-                      <img src="images\Events\Illuminate.png" alt="IEDC logo" width="200" height="300">
+					  <div class="w3-card-4">
+					  <img src="images\Events\Illuminate.png" class="img"  alt="IEDC logo" width="200" height="300" align="left">
+					  <div style="overflow-y: scroll; height:300px;">
+					  <p>" Expert in anything was once a beginner "- Unknown </p>
+
+						<p>Are you interested in entrepreneurial chaos!</p>
+
+						<p>Well then this is a great win.</p>
+
+						<p>IEDC CEA proudly announces ILLUMINATE!  🥁🥁🥁Pre-Eureka!  Workshop on Entrepreneurship across India, in collaboration with E-Cell IIT-Bombay .</p>  <p>“Eureka!” – the annual B-Plan competition to encourage youth towards entrepreneurship.</p>
+
+						<p>Workshop fully deals with Entrepreneurship,Problem identification and idea generating,Business model canvas,Pitching ... and so more...🙌🏻</p>
+
+						<p>‼ Activity Points and certificates will be awarded ‼</p>
+						</div>
+					  </div>
+                      
 
                 
         </div>
     </section>
-	
+	<hr></hr>
 	<!-- OUR TEAM -->
     <section class="our_team" id="our_team">
         <div class="container">
@@ -125,7 +238,7 @@
                 
         </div>
     </section>
-	
+	<hr></hr>
 	<!-- MEDIA GALLERY -->
     <section class="media_gallery" id="media_gallery">
         <div class="container">
@@ -134,7 +247,7 @@
 				
         </div>
     </section>
-	
+	<hr></hr>
 	<!-- CONTACT-->
     <section class="contact" id="contact">
         <div class="container">
